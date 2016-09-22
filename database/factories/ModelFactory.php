@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(codecommerce\User::class, function (Faker\Generator $faker) {
+$factory->define(CodeCommerce\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
@@ -21,14 +21,14 @@ $factory->define(codecommerce\User::class, function (Faker\Generator $faker) {
 });
 
 
-$factory->define(codecommerce\Category::class, function (Faker\Generator $faker) {
+$factory->define(CodeCommerce\Category::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word(),
         'description' => $faker->sentence()
     ];
 });
 
-$factory->define(codecommerce\Product::class, function (Faker\Generator $faker) {
+$factory->define(CodeCommerce\Product::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word(),
         'description' => $faker->sentence(),
@@ -37,4 +37,10 @@ $factory->define(codecommerce\Product::class, function (Faker\Generator $faker) 
         'recommend' => $faker->numberBetween(0,1),
         'featured' => $faker->numberBetween(0,1)
     ];
+});
+
+$factory->define(CodeCommerce\Tag::class, function(Faker\Generator $faker) {
+   return [
+        'name' => $faker->word()
+   ];
 });

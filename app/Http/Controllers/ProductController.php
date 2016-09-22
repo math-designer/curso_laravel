@@ -1,14 +1,14 @@
 <?php
 
-namespace codecommerce\Http\Controllers;
+namespace CodeCommerce\Http\Controllers;
 
-use codecommerce\Category;
-use codecommerce\Product;
-use codecommerce\ProductImage;
+use CodeCommerce\Category;
+use CodeCommerce\Product;
+use CodeCommerce\ProductImage;
 use Illuminate\Http\Request;
 
-use codecommerce\Http\Requests;
-use codecommerce\Http\Controllers\Controller;
+use CodeCommerce\Http\Requests;
+use CodeCommerce\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
@@ -97,9 +97,7 @@ class ProductController extends Controller
         $image = $productImageModel->find($id);
         $pathImage = $image->id . '.' . $image->extension;
 
-        if (file_exists(public_path($pathImage))) {
-            Storage::disk('public_local')->delete($pathImage);
-        }
+        Storage::disk('public_local')->delete($pathImage);
 
         $product = $image->product;
 

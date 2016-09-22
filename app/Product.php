@@ -1,6 +1,6 @@
 <?php
 
-namespace codecommerce;
+namespace CodeCommerce;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,11 +10,21 @@ class Product extends Model
 
     public function category()
     {
-        return $this->belongsTo('codecommerce\Category');
+        return $this->belongsTo('CodeCommerce\Category');
     }
 
     public function images()
     {
-        return $this->hasMany('codecommerce\ProductImage');
+        return $this->hasMany('CodeCommerce\ProductImage');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany('CodeCommerce\Tag');
+    }
+
+    public function getNamePriceAttribute()
+    {
+        return $this->name . ' - ' . $this->price;
     }
 }

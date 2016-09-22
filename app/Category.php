@@ -1,6 +1,6 @@
 <?php
 
-namespace codecommerce;
+namespace CodeCommerce;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class Category extends Model
 
     public function products()
     {
-        return $this->hasMany('codecommerce\Product');
+        return $this->hasMany('CodeCommerce\Product');
     }
 }

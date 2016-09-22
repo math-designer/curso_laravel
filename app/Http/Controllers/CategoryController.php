@@ -1,12 +1,12 @@
 <?php
 
-namespace codecommerce\Http\Controllers;
+namespace CodeCommerce\Http\Controllers;
 
-use codecommerce\Category;
+use CodeCommerce\Category;
 use Illuminate\Http\Request;
 
-use codecommerce\Http\Requests;
-use codecommerce\Http\Controllers\Controller;
+use CodeCommerce\Http\Requests;
+use CodeCommerce\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace codecommerce\Http\Requests;
+namespace CodeCommerce\Http\Requests;
 
-use codecommerce\Http\Requests\Request;
+use CodeCommerce\Http\Requests\Request;
 
 class CategoryRequest extends Request
 {
