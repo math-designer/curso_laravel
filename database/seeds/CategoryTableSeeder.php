@@ -15,6 +15,6 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->delete();
-        factory('codecommerce\Category', 10)->create();
+        factory(CodeCommerce\Category::class, 10)->create();
     }
 }
